@@ -9,12 +9,14 @@ import com.moviebooking.repository.SeatRepository;
 import com.moviebooking.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/bookings")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequiredArgsConstructor
 public class BookingController {
   private final BookingService bookingService;
